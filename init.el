@@ -4,6 +4,11 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 
+(use-package zenburn-theme
+  :ensure t
+  :config
+  (load-theme 'zenburn t))
+
 ;; switch meta and super key (set command to meta key)
 (setq mac-option-key-is-meta nil)
 (setq mac-command-key-is-meta t)
