@@ -10,14 +10,29 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
 
+(toggle-scroll-bar -1)
+(tool-bar-mode -1)
+
 (require 'use-package)
 
 (use-package smartparens
-  :ensure t
-  :config
-  (smartparens-mode 1))
+  :ensure t)  
 
 (use-package evil
   :ensure t
   :config
   (global-set-key (kbd "C-w") 'evil-delete-backward-word))
+
+(use-package company :ensure t)
+
+(use-package tuareg
+  :ensure t)
+
+(use-package utop
+  :ensure t)
+
+(use-package merlin
+  :ensure t)
+
+(use-package magit
+  :ensure t)
